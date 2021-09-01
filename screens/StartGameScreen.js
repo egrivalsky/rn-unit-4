@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
+        fontFamily: 'OpenSans-Bold',
         fontSize: 20,
         marginVertical: 10,
         color: 'black',
