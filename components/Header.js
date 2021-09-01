@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     titleText: {
         color: 'black',
         fontSize: 18,
-        fontFamily: 'open-sans-bold'
+        fontFamily: 'open-sans-bold',
     },
 
 })

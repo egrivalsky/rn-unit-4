@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, Button, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native';
-import { Colors, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
+import { Text, View, StyleSheet, Button, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native';
 import Card from '../components/Card';
 import Input from  '../components/Input';
 import colors from '../constants/colors';
 import NumberContainer from '../components/NumberContainer';
+import BodyText from '../components/BodyText';
+import TitleText from '../components/TitleText';
 
 const StartGameScreen = props => {
 
@@ -40,7 +41,7 @@ const StartGameScreen = props => {
     if (confirmed)  {
         confirmedOutput= (
         <Card style={styles.summaryContainer}>
-            <Text>You selected:</Text>
+            <TitleText>You selected:</TitleText>
             <NumberContainer>{selectedNumber}</NumberContainer>
             <Button title="START GAME" onPress={()=> props.onStartGame(selectedNumber)} color={colors.primary}/>
         </Card>
@@ -54,10 +55,10 @@ const StartGameScreen = props => {
         }}>
             <View style={styles.screen}>
 
-                <Text style={styles.title}>Start a New Game!</Text>
+                <TitleText>Start a New Game!</TitleText>
                 
                 <Card style={styles.inputContainer}>
-                    <Text>Select a Number</Text>
+                    <BodyText>Select a Number</BodyText>
                     <Input 
                         style={styles.input}
                         blurOnSubmit autoCapitalize='none'
@@ -91,12 +92,12 @@ const styles = StyleSheet.create({
         width: '40%' 
     },
 
-    title: {
-        fontFamily: 'OpenSans-Bold',
-        fontSize: 20,
-        marginVertical: 10,
-        color: 'black',
-    },
+    // title: {
+    //     fontFamily: 'open-sans-bold',
+    //     fontSize: 20,
+    //     marginVertical: 10,
+    //     color: 'black',
+    // },
 
     buttonContainer: {
         flexDirection: 'row',

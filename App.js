@@ -21,7 +21,10 @@ export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
 
   if (!dataLoaded) {
-    return <AppLoading startAsync={fetchFonts} onFinish={()=>setDataLoaded(true)} onError={(err) => console.log(err)} />
+    return <AppLoading 
+    startAsync={fetchFonts}
+    onFinish={()=>setDataLoaded(true)}
+    onError={(err) => console.log('App.js Line 27: ' + err)} />
   }
 
   const configureNewGameHandler = ()=> {
